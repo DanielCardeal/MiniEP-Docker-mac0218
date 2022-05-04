@@ -5,7 +5,7 @@ EXPOSE 80/tcp
 
 # Garante que o diretório das páginas existe
 RUN mkdir -p /usr/src/pages
+VOLUME /usr/src/pages
 
 # Copia os arquivos para o container
-COPY *.html /usr/src/pages/
 COPY Caddyfile /etc/caddy/Caddyfile
